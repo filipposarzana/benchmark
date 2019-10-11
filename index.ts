@@ -1,5 +1,6 @@
 import { Event, Suite } from 'benchmark'
 import chalk from 'chalk'
+import { log } from './utils/log'
 
 type TFilterValue = 'fastest' | 'slowest'
 type TMapValue = 'name'
@@ -15,23 +16,23 @@ type TEvent = Event & {
 }
 
 const onComplete = (event: TEvent) => {
-  console.log('')
+  log('')
 
   const names = event.currentTarget.filter('fastest').map('name').join(', ')
 
-  console.log(`${chalk.bgCyan.black('Complete:')} fastest cases are: ${chalk.bold(names)}`)
+  log(`${chalk.bgCyan.black('Complete:')} fastest cases are: ${chalk.bold(names)}`)
 }
 
 const onCycle = (event: TEvent) => {
   const result = String(event.target)
 
-  console.log(`${chalk.bgCyan.black('Cycle:')} ${result}`)
+  log(`${chalk.bgCyan.black('Cycle:')} ${result}`)
 }
 
 const getSuite = (name: string) => new Suite(name, {
+  async: true,
   onComplete,
   onCycle,
-  async: true,
 })
 
 export { getSuite }

@@ -5,7 +5,7 @@ const suite = getSuite('map-for-each')
 const list = [1, 2, 4, 5, 6]
 
 const forBase = () => {
-  const items = []
+  const items: number[] = []
 
   for (let i = 1; i < list.length; i++) {
     items.push(i + 1)
@@ -15,7 +15,7 @@ const forBase = () => {
 }
 
 const forEach = () => {
-  const items = []
+  const items: number[] = []
 
   list.forEach(i => {
     items.push(i + 1)
@@ -25,7 +25,7 @@ const forEach = () => {
 }
 
 const forOf = () => {
-  const items = []
+  const items: number[] = []
 
   for (const i of list) {
     items.push(i + 1)
@@ -35,10 +35,12 @@ const forOf = () => {
 }
 
 const forIn = () => {
-  const items = []
+  const items: number[] = []
 
   for (const i in list) {
-    items.push(i + 1)
+    if (list[i]) {
+      items.push(Number.parseInt(i, 10) + 1)
+    }
   }
 
   return items

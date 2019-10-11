@@ -13,9 +13,11 @@
     "@types/microtime": "^2.1.0",
     "@types/node": "^12.7.12",
     "chalk": "^2.4.2",
-    "ts-node": "^8.4.1"
+    "ts-node": "^8.4.1",
+    "tslint": "^5.20.0"
   },
   "scripts": {
-    "benchmark:map-for-each": "ts-node map-for-each/index.ts"
+    "benchmark:map-for-each": "ts-node map-for-each/index.ts",
+    "ci:lint": "yarn tslint --project ./tsconfig.json"
   }
 }
