@@ -1,8 +1,9 @@
 import { getSuite } from '..'
+import { range } from '../utils/range'
 
 const suite = getSuite('map-for-each')
 
-const list = [1, 2, 4, 5, 6]
+const list = range(10000)
 
 const forBase = () => {
   const items: number[] = []
