@@ -13,12 +13,20 @@
     "@types/microtime": "^2.1.0",
     "@types/node": "^12.7.12",
     "chalk": "^2.4.2",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "3.0.2",
     "ts-node": "^8.4.1",
     "tslint": "^5.20.0"
   },
   "scripts": {
     "benchmark:array-indexof-set-has": "ts-node array-indexof-set-has/index.ts",
     "benchmark:map-for-each": "ts-node map-for-each/index.ts",
-    "ci:lint": "yarn tslint --project ./tsconfig.json"
+    "ci:lint": "yarn tslint --project ./tsconfig.json",
+    "commit": "yarn git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
