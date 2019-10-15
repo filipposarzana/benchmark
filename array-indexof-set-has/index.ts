@@ -4,7 +4,7 @@ import { range } from '../utils/range'
 const suite = getSuite('array-indexof-set-has')
 
 const list = range(100000)
-const items = range(10000)
+const items = range(100)
 const set = new Set(items)
 
 const arrayIndexOf = () => {

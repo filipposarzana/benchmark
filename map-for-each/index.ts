@@ -3,7 +3,7 @@ import { range } from '../utils/range'
 
 const suite = getSuite('map-for-each')
 
-const list = range(10000)
+const list = range(100)
 
 const forBase = () => {
   const items: number[] = []

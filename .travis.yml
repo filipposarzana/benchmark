@@ -24,3 +24,5 @@ jobs:
       script: yarn benchmark:array-indexof-set-has
     -
       script: yarn benchmark:map-for-each
+    -
+      script: yarn benchmark:regex-match-alphanum
