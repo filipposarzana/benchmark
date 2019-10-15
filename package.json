@@ -21,6 +21,7 @@
   "scripts": {
     "benchmark:array-indexof-set-has": "ts-node array-indexof-set-has/index.ts",
     "benchmark:map-for-each": "ts-node map-for-each/index.ts",
+    "benchmark:regex-match-alphanum": "ts-node regex-match-alphanum/index.ts",
     "ci:lint": "yarn tslint --project ./tsconfig.json",
     "commit": "yarn git-cz"
   },
