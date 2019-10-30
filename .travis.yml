@@ -25,4 +25,6 @@ jobs:
     -
       script: yarn benchmark:map-for-each
     -
+      script: yarn benchmark:regex-constructor
+    -
       script: yarn benchmark:regex-match-alphanum
